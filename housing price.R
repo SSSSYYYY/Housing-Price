@@ -15,7 +15,7 @@ options(java.parameters = "-Xmx64048m") #64048 is 64 GB
 # note that the features (1stFlrSF,2ndFlrSF) will get automatically renamed to 
 #("X1stFlrSF","X2ndFlrSF") because names in R cannot begin with numbers
 
-setwd("/Users/yangshenyang/Desktop/course/data mining/exam")
+setwd("/Users/yangshenyang/Desktop/course/data mining/project")
 
 tr <- read.table("train.csv", header=T, sep=",", quote="",
                 colClasses=c("numeric",rep("factor",2),rep("numeric",2),rep("factor",12)
