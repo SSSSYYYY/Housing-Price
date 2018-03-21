@@ -47,15 +47,11 @@ DataQualityReportOverall(tr)
 #   CompleteCases IncompleteCases CompleteCasePct
 # 1             0            1460               0
 
-### none of the cases is compelte, 
-### i.e. 0% of the record is complete
 
 
 # DataQualityReportOverall(te)
 # # CompleteCases IncompleteCases CompleteCasePct
 # # 1             0            1459               0
-
-# percent of complete records 
 
 source("DataQualityReport.R")
 report <- DataQualityReport(tr)
@@ -424,7 +420,6 @@ pca$loadings
 # Proportion Var 0.017 0.013 0.012 0.012 0.010 0.009 0.008 0.007 0.006 0.004 0.004 0.001
 # Cumulative Var 0.915 0.928 0.941 0.953 0.963 0.971 0.979 0.986 0.991 0.996 0.999 1.000
 
-#### the first principal component accounts for 23.2% of the total variance 
 
 plot(pca$values, type="b", main="Housing Data", col="blue")
 
@@ -1037,7 +1032,7 @@ submission <- read.table("sample_submission.csv",header=T, sep=",")
 submission$SalePrice <- yhat_final
 
 # Write out file to be uploaded to Kaggle.com for scoring
-write.table(submission, file=paste0("submission_SY.csv") 
+write.table(submission, file=paste0("final_SY.csv") 
             , quote=F, sep=",", row.names=F, col.names=T)
 
 
